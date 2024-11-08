@@ -100,4 +100,4 @@ DPI Tunnel Lite is a lightweight version of a tunneling application designed to 
 ## Download
 
 You can download the latest version of DPI Tunnel Lite:
-
+https://github.com/GAME-OVER-op/DPI-Tunnel-CLi-Android-magisk-module-/releases/tag/DPI_Tunnel_CLi_Android_magisk_module
