@@ -1,7 +1,7 @@
 # DPI Tunnel Lite
 
 **Version:** 5.0.0 stable as of 08.11.2024  
-**Developer:** Ggover
+**Developer:** game-over-op
 
 ## Project Description
 
