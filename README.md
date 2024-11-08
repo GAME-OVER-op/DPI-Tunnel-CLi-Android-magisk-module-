@@ -101,5 +101,3 @@ DPI Tunnel Lite is a lightweight version of a tunneling application designed to 
 
 You can download the latest version of DPI Tunnel Lite:
 
-- [Standard Version](https://example.com/download/standard_version)  
-- [DNS Version from comss](https://example.com/download/comss_version)
