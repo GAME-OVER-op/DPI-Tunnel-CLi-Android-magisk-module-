@@ -5,7 +5,7 @@
 
 ## Project Description
 
-DPI Tunnel Lite is a lightweight version of a tunneling application designed to bypass restrictions, offering better performance compared to [DPI Tunnel + Dns only](https://4pda.to/forum/index.php?showtopic=915158&view=findpost&p=131876732).
+DPI Tunnel Lite is a lightweight version of a tunneling application designed to bypass restrictions, offering better performance compared to [DPI Tunnel Android](https://github.com/nomoresat/DPITunnel-android).
 
 ## Technical Requirements
 
