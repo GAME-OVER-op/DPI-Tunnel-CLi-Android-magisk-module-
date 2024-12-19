@@ -1,101 +1,54 @@
-# DPI Tunnel Lite
+# Zapret DPI Tunnel & DNS (ZDT&D)
 
-**Version:** 5.0.0 stable as of 08.11.2024  
-**Developer:** game-over-op
+**Zapret DPI Tunnel & DNS (ZDT&D)** — это модуль Magisk, созданный для обхода интернет-цензуры с использованием методов десинхронизации для преодоления фильтров глубокого анализа пакетов (DPI).
 
-## Project Description
+## Для чего предназначен модуль:
 
-DPI Tunnel Lite is a lightweight version of a tunneling application designed to bypass restrictions, offering better performance compared to [DPI Tunnel Android](https://github.com/nomoresat/DPITunnel-android).
+- **Обход DPI**: Использует техники десинхронизации для доступа к заблокированным или ограниченным интернет-ресурсам.
+- **Локальный прокси**: Позволяет перенаправлять сетевой трафик через локальный прокси-сервер для большей конфиденциальности и контроля.
+- **Гибкость настроек**: Обеспечивает возможность перенаправления трафика только определённых приложений, используя их уникальные идентификаторы (UID).
 
-## Technical Requirements
+## Ссылки на связанные проекты
 
-- **Magisk:** Version 19 or higher
-- **Android:** 11 or higher
+- **DPI Tunnel CLI**: Инструмент командной строки для обхода цензуры, использующий десинхронизацию для обхода фильтров DPI.  
+  [GitHub: nomoresat/DPITunnel-cli](https://github.com/nomoresat/DPITunnel-cli)
 
-## Settings and Parameters
+- **Zapret от bol-van**: Мультиплатформенный инструмент для обхода DPI, предназначенный для работы на различных системах, включая Linux и Windows.  
+  [GitHub: bol-van/zapret](https://github.com/bol-van/zapret)
 
-### Proxy and Tunnel Settings:
+## Примечание
 
-- `--mode=<mode>`  
-  Sets the proxy mode. Options are: `proxy` (default) or `transparent`.  
-  **Example:** `--mode=transparent`.
+Этот модуль требует root-доступа и установленного Magisk для корректной работы.
 
-- `--ca-bundle-path=<path>`  
-  Path to the CA certificate bundle file in PEM format for SSL.  
-  **Default:** `./ca.bundle`.  
-  **Example:** `--ca-bundle-path=/path/to/ca.bundle`.
+## Предупреждение
 
-### Security and Blocking Circumvention Settings:
+Использование данного модуля может нарушать политику вашего интернет-провайдера или законодательства вашей страны. Убедитесь, что вы действуете в рамках закона. Используйте модуль на свой страх и риск.
 
-- `--buffer-size=<size_in_bytes>`  
-  Size of the data buffer in bytes. Default is 512.  
-  **Example:** `--buffer-size=1024`.
+# Zapret DPI Tunnel & DNS (ZDT&D)
 
-- `--desync-attacks=[<mode0>][,<mode1>]`  
-  Defines desynchronization attacks, including `fake rst`, `rstack`, `disorder`, `split`.  
-  **Example:** `--desync-attacks=fake,disorder_fake`.
+**Zapret DPI Tunnel & DNS (ZDT&D)** is a Magisk module designed to bypass internet censorship using desynchronization methods to evade Deep Packet Inspection (DPI) filters.
 
-- `--split-at-sni`  
-  Enables Client Hello splitting by SNI.
+## Purpose of the Module:
 
-- `--split-position=<offset_in_bytes>`  
-  Splits Client Hello at the specified byte. Default is 3.  
-  **Example:** `--split-position=5`.
+- **DPI Bypass**: Utilizes desynchronization techniques to access blocked or restricted online resources.  
+- **Local Proxy**: Allows redirecting network traffic through a local proxy server for enhanced privacy and control.  
+- **Flexible Configuration**: Enables traffic redirection for specific applications by using their unique User IDs (UIDs).  
 
-- `--wrong-seq`  
-  Sends fake packets with previous SEQ/ACK values.
+## Links to Related Projects
 
-### TTL and Auto-TTL Parameters:
+- **DPI Tunnel CLI**: A command-line tool for bypassing censorship using desynchronization to evade DPI filters.  
+  [GitHub: nomoresat/DPITunnel-cli](https://github.com/nomoresat/DPITunnel-cli)  
 
-- `--ttl=<number>`  
-  Sets TTL for fake packets.  
-  **Example:** `--ttl=5`.
+- **Zapret by bol-van**: A cross-platform tool for DPI bypass, designed to work on various systems, including Linux and Windows.  
+  [GitHub: bol-van/zapret](https://github.com/bol-van/zapret)  
 
-- `--auto-ttl=<a1>-<a2>-<m>`  
-  Defines TTL based on distance using parameters `a1`, `a2`, and `m`.  
-  **Default:** `1-4-10`.  
-  **Example:** `--auto-ttl=2-5-10`.
+## Note
 
-- `--min-ttl=<number>`  
-  Minimum TTL at which fake packets are sent.  
-  **Example:** `--min-ttl=3`.
+This module requires root access and a Magisk installation to function properly.
 
-### DNS Settings:
+## Warning
 
-- `--doh`  
-  Enables DoH (DNS over HTTPS) for domain resolution.
-
-- `--doh-server=<url>`  
-  URL for the DoH server.  
-  **Default:** [https://dns.google/dns-query](https://dns.google/dns-query).  
-  **Example:** `--doh-server=https://cloudflare-dns.com/dns-query`.
-
-- `--builtin-dns`  
-  Enables the built-in DNS resolver for Android.
-
-- `--builtin-dns-ip=<ip>`  
-  IP address of the DNS server for the built-in resolver.  
-  **Default:** `8.8.8.8`.  
-  **Example:** `--builtin-dns-ip=1.1.1.1`.
-
-- `--builtin-dns-port=<port>`  
-  Port for the DNS server used by the built-in resolver.  
-  **Default:** `53`.  
-  **Example:** `--builtin-dns-port=5353`.
-
-### TCP Settings:
-
-- `--wsize=<number>`  
-  Sets the TCP window size for splitting the Server Hello.  
-  **Example:** `--wsize=64`.
-
-- `--wsfactor=<number>`  
-  Multiplier for TCP window scaling used with `wsize`.  
-  **Example:** `--wsfactor=6`.
-
-## Notes
-
-- If a hosts file is present on the device, the module will ignore it. This feature may be added in a future update.
+The use of this module may violate your internet service provider's policies or your country's laws. Ensure you act within legal boundaries. Use this module at your own risk.
 
 ## Download
 
