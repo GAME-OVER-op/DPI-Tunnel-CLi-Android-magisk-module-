@@ -1,0 +1,7 @@
+id=dpi_tunnel_cli
+name=Zapret DPI Tunnel and comss dns
+version=5.7.4
+versionCode=574000
+author=Ggover 
+description=Шифрования трафика, улучшение работы интернет ресурсов.
+updateJson=https://raw.githubusercontent.com/GAME-OVER-op/DPI-Tunnel-CLi-Android-magisk-module-/main/update.jso
