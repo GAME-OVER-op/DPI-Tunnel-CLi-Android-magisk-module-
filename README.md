@@ -40,7 +40,7 @@
   [GitHub: nomoresat/DPITunnel-cli](https://github.com/nomoresat/DPITunnel-cli)  
 
 - **Zapret by bol-van**: A cross-platform tool for DPI bypass, designed to work on various systems, including Linux and Windows.  
-  [GitHub: bol-van/zapret](https://github.com/bol-van/zapret)  
+  [GitHub: bol-van/zapret](https://github.com/bol-van/zapret)
 
 ## Note
 
@@ -54,3 +54,8 @@ The use of this module may violate your internet service provider's policies or 
 
 You can download the latest version of DPI Tunnel Lite:
 https://github.com/GAME-OVER-op/DPI-Tunnel-CLi-Android-magisk-module-/releases/
+<div align="center">
+    <a href="https://github.com/GAME-OVER-op/ZDT-D/releases">
+        <img src="https://img.shields.io/github/downloads/GAME-OVER-op/DPI-Tunnel-CLi-Android-magisk-module-/total?style=flat-square" alt="Downloads"/>
+    </a>
+</div>
